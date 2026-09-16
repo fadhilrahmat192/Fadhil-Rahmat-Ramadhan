@@ -17,31 +17,33 @@
   --secondary-light: #64748B;
   
   --naval-navy: #0A192F;
-  --naval-blue: #1E3A8A;
+  --naval-blue: #38BDF8;
   --energy-green: #10B981;
-  --energy-green-bg: #ECFDF5;
+  --energy-green-bg: rgba(16, 185, 129, 0.15);
   --amber-status: #F59E0B;
-  --amber-status-bg: #FFFBEB;
+  --amber-status-bg: rgba(245, 158, 11, 0.15);
   
-  /* Theme Light (Default) */
-  --bg-body: #F8FAFC;
-  --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #FFFFFF;
-  --bg-surface-muted: #F1F5F9;
-  --bg-glass: rgba(255, 255, 255, 0.88);
-  --border-color: #E2E8F0;
-  --border-subtle: #CBD5E1;
+  /* Pure Dark Theme (Locked Default) */
+  --bg-body: #0B1120;
+  --bg-surface: #111B2E;
+  --bg-surface-elevated: #16243D;
+  --bg-surface-muted: #1E2E4A;
+  --bg-glass: rgba(17, 27, 46, 0.9);
+  --border-color: #1E2E4A;
+  --border-subtle: #2D4369;
   
-  --text-main: #0F172A;
-  --text-body: #334155;
-  --text-muted: #64748B;
-  --text-light: #94A3B8;
+  --text-main: #F8FAFC;
+  --text-body: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
   
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 25px rgba(6, 182, 212, 0.2);
+  --accent-light: rgba(6, 182, 212, 0.15);
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 30px rgba(6, 182, 212, 0.35);
 
   /* Typography */
   --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -324,6 +326,8 @@ button, input, textarea, select {
   align-items: center;
   gap: 0.85rem;
   text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo-symbol {
@@ -342,6 +346,7 @@ button, input, textarea, select {
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .logo-symbol::after {
@@ -364,6 +369,8 @@ button, input, textarea, select {
 .logo-text {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
+  justify-content: center;
 }
 
 .logo-name {
@@ -371,6 +378,8 @@ button, input, textarea, select {
   font-weight: 700;
   color: var(--text-main);
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .logo-sub {
@@ -379,6 +388,7 @@ button, input, textarea, select {
   color: var(--accent);
   font-weight: 600;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-desktop {
@@ -686,6 +696,28 @@ button, input, textarea, select {
   gap: 1rem;
 }
 
+.hero-btn-single {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0891B2 0%, #06B6D4 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.hero-btn-single:hover {
+  background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.55);
+  color: #FFFFFF;
+}
+
 /* Hero Profile Card */
 .hero-card-wrapper {
   position: relative;
@@ -695,10 +727,12 @@ button, input, textarea, select {
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-xl);
   position: relative;
   overflow: hidden;
+  max-width: 310px;
+  margin-left: auto;
 }
 
 .hero-photo-container {
@@ -706,7 +740,7 @@ button, input, textarea, select {
   border-radius: var(--radius-md);
   overflow: hidden;
   background-color: var(--bg-surface-muted);
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/4.5;
   box-shadow: var(--shadow-md);
 }
 
@@ -715,53 +749,21 @@ button, input, textarea, select {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: opacity 0.4s ease, filter 0.4s ease, transform 0.5s ease;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.45s ease;
 }
 
+.hero-profile-card:hover .hero-photo,
 .hero-photo:hover {
-  transform: scale(1.02);
-}
-
-.photo-control-bar {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(8px);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  z-index: 10;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.photo-switch-btn {
-  background: transparent;
-  border: none;
-  color: #E2E8F0;
-  font-size: 0.78rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
-}
-
-.photo-switch-btn.active {
-  background: var(--accent);
-  color: #FFFFFF;
-  font-weight: 600;
+  filter: grayscale(0%);
+  transform: scale(1.04);
 }
 
 .card-stamp {
   position: absolute;
-  top: 24px;
-  left: 24px;
-  background: rgba(15, 30, 54, 0.85);
+  top: 18px;
+  left: 18px;
+  background: rgba(15, 30, 54, 0.88);
   backdrop-filter: blur(8px);
   color: #FFFFFF;
   padding: 0.45rem 0.85rem;
@@ -1952,7 +1954,7 @@ textarea.form-control {
   }
 
   .hero-profile-card {
-    max-width: 380px;
+    max-width: 290px;
     margin: 0 auto;
   }
 
@@ -1978,19 +1980,56 @@ textarea.form-control {
     display: flex;
   }
 
+  .logo-brand {
+    gap: 0.65rem;
+  }
+
+  .logo-symbol {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .logo-name {
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    font-size: 0.68rem;
+    white-space: nowrap;
+  }
+
+  .hero-section {
+    padding: 3rem 0;
+  }
+
   .hero-name {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
   }
 
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
   }
 
   .naval-grid, .comp-grid, .projects-grid, .org-grid {
     grid-template-columns: 1fr;
   }
 
+  .search-trigger-btn {
+    padding: 0.45rem 0.65rem;
+  }
+
   .search-trigger-btn span {
+    display: none;
+  }
+
+  .search-trigger-btn .kbd-badge {
     display: none;
   }
 
@@ -2004,6 +2043,106 @@ textarea.form-control {
 
   .hero-contacts-bar {
     flex-direction: column;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .hero-contact-item {
+    width: 100%;
+    word-break: break-all;
+  }
+
+  .hero-profile-card {
+    max-width: 270px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .hero-btn-single {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .filter-container {
+    gap: 0.4rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .logo-name {
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    font-size: 0.62rem;
+  }
+
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .hero-titles {
+    font-size: 0.98rem;
+  }
+
+  .hero-naval-badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hero-profile-card {
+    max-width: 250px;
+    padding: 0.9rem;
+  }
+
+  .quick-meta-box {
+    padding: 0.65rem 0.4rem;
+  }
+
+  .meta-num {
+    font-size: 1.15rem;
+  }
+
+  .meta-label {
+    font-size: 0.68rem;
+  }
+
+  .project-loc-period {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .timeline-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .timeline-period {
+    align-self: flex-start;
+  }
+
+  .project-modal-body {
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-form-card {
+    padding: 1.25rem 1rem;
   }
 }

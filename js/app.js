@@ -49,21 +49,21 @@ const projectsData = {
     id: "jembrana",
     title: "PLTS Atap Masjid Pantai Jembrana",
     category: "renewable",
-    status: "completed",
-    statusLabel: "Selesai (Operasional)",
+    status: "in-progress",
+    statusLabel: "Tahap Persiapan Konstruksi (Perizinan & Kuota PLN Disetujui)",
     location: "Kabupaten Jembrana, Bali",
     period: "Desember 2025",
-    role: "Engineer",
+    role: "System Designer & Permitting Lead",
     capacity: "2 kWp (Kilowatt-peak)",
-    stakeholders: "Masyarakat & Pengurus Masjid Pantai Jembrana, Komunitas Energi Bersih",
-    summary: "Instalasi surya atap terpasang sebagai proyek demonstrasi energi terbarukan di fasilitas publik untuk promosi kesadaran lingkungan dan ketahanan energi lokal berbasis masyarakat pesisir.",
+    stakeholders: "Masyarakat & Pengurus Masjid Pantai Jembrana, Komunitas Energi Bersih, PLN",
+    summary: "Perancangan detail teknis sistem (engineering design) dan penyelesaian seluruh alur perizinan resmi termasuk persetujuan kuota PLTS Atap di PLN. Proyek saat ini dalam status persiapan lanjutan menuju implementasi konstruksi fisik.",
     technicalDetails: [
-      "Pemasangan sistem solar PV atap dengan inverter on-grid.",
-      "Analisis sudut kemiringan (tilt angle) dan orientasi azimut untuk radiasi optimal.",
-      "Instalasi sistem proteksi petir dan grounding pesisir laut.",
-      "Pengukuran efisiensi operasional dan reduksi tagihan listrik fasilitas publik."
+      "Perancangan detail teknis sistem elektrikal dan kalkulasi simulasi yield solar PV (PVsyst).",
+      "Penyusunan dokumen teknis dan pengurusan persetujuan resmi kuota PLTS Atap ke PLN.",
+      "Penyelesaian seluruh administrasi dan perizinan regulasi ketenagalistrikan lokal.",
+      "Penyelarasan proteksi kelistrikan, sistem inverter on-grid, dan persiapan pengadaan komponen fase konstruksi."
     ],
-    impact: "Mengedukasi masyarakat pesisir tentang aplikasi nyata energi surya dan memangkas biaya operasional rumah ibadah."
+    impact: "Menjadi model inisiatif ketahanan energi mandiri di fasilitas publik pesisir berbasis perizinan dan integrasi jaringan PLN yang terstandarisasi."
   },
   makassar: {
     id: "makassar",
@@ -90,20 +90,20 @@ const projectsData = {
     title: "Tender Pengadaan Biomassa PLN EPI (Woodchip Supply)",
     category: "renewable",
     status: "completed",
-    statusLabel: "Partisipasi Tender Procurement Resmi",
+    statusLabel: "Kualifikasi Teknis & Kemitraan Strategis",
     location: "North Sulawesi / PLTU Punagaya",
     period: "Januari 2026",
-    role: "Strategi & Administrasi Eksekutif",
+    role: "Lead Administrator & Partnership Strategist",
     capacity: "Woodchip Biomass Feedstock Supply",
-    stakeholders: "PLN Energi Primer Indonesia (PLN EPI), PT Tiara Mulia Lestari, Unit Pembangkitan PLTU",
-    summary: "Partisipasi dalam tender procurement penyediaan bahan bakar biomassa woodchip berkelanjutan untuk program co-firing pembangkit listrik tenaga uap nasional guna mereduksi emisi batu bara.",
+    stakeholders: "PLN Energi Primer Indonesia (PLN EPI), Mitra Industri Swasta / Pabrik, Unit PLTU",
+    summary: "Memimpin penyiapan kelengkapan administrasi pengadaan nasional dan perumusan Perjanjian Kerja Sama (PKS) strategis antara pihak swasta (pabrik pemasok) dengan PLN Energi Primer Indonesia (PLN EPI) untuk pasokan biomassa woodchip co-firing.",
     technicalDetails: [
-      "Penyusunan dokumen teknis spesifikasi nilai kalor dan kelembaban woodchip.",
-      "Analisis rantai pasok (supply chain) logistik biomassa dari hulu kehutanan ke pembangkit.",
-      "Kepatuhan regulasi tender pengadaan nasional PLN EPI.",
-      "Perhitungan keekonomian co-firing biomassa terhadap standar BPP PLN."
+      "Pengelolaan menyeluruh seluruh dokumen administrasi, legalitas, dan kepatuhan pengadaan tender nasional PLN EPI.",
+      "Perumusan dan fasilitasi Perjanjian Kerja Sama (PKS) kemitraan strategis antara pihak swasta (pabrik) dan entitas PLN.",
+      "Analisis rantai pasok (supply chain) logistik biomassa dari hulu perkebunan/pabrik pengolahan ke pembangkit listrik.",
+      "Evaluasi spesifikasi teknis nilai kalor serta simulasi struktur keekonomian co-firing biomassa terhadap standar BPP PLN."
     ],
-    impact: "Mendukung transisi dekarbonisasi pembangkit termal eksisting menuju energi primer yang lebih bersih."
+    impact: "Membangun jembatan kemitraan formal industri swasta dan BUMN dalam pemenuhan pasokan bahan baku energi primer terbarukan skala besar."
   },
   ndt: {
     id: "ndt",
@@ -129,20 +129,25 @@ const projectsData = {
 };
 
 // --- Searchable Database for Command Palette (Ctrl+K) ---
+// --- Searchable Database for Command Palette (Ctrl+K) ---
 const searchIndex = [
   { title: "PLTM Keureuto (Aceh Utara)", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "pltm keureuto mikro hidro aceh laksamana cakra engineer spv" },
   { title: "PLTS + BESS Selayar", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "plts selayar bess baterai battery surya kepulauan diesilisasi" },
-  { title: "PLTS Atap Masjid Pantai Jembrana", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "jembrana bali 2 kwp solar atap masjid pesisir" },
+  { title: "PLTS Atap Masjid Pantai Jembrana", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "jembrana bali 2 kwp solar atap masjid pesisir kuota pln perizinan pvsyst persiapan konstruksi" },
   { title: "PLTS Industri Makassar", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "makassar industri kima pelindo greenvolt investor rooftop" },
-  { title: "Tender Biomassa PLN EPI (Woodchip)", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "biomassa pln epi woodchip co firing punagaya tiara mulia lestari" },
+  { title: "Tender Biomassa PLN EPI (Woodchip)", category: "Proyek Energi Terbarukan", link: "#projects", keywords: "biomassa pln epi woodchip co firing punagaya tiara mulia lestari pks swasta administrasi" },
   { title: "NDT Inspection & Marine QA Portfolio", category: "Maritim & Inspeksi", link: "#projects", keywords: "ndt ultrasonic ut mt megger tug boat barge kapal perkapalan" },
   
-  { title: "PT Penta Utama Manunggal (Technical Manager)", category: "Pengalaman Kerja", link: "#experience", keywords: "penta manajer teknis manager engineer proyek juli 2025 juni 2024" },
+  { title: "PT Penta Utama Manunggal (Manajer Teknik)", category: "Pengalaman Kerja", link: "#experience", keywords: "penta pum manajer teknik manager engineer proyek juli 2025" },
   { title: "PT Nusantara Energi Hijau (Founder & Direktur)", category: "Pengalaman Kerja", link: "#experience", keywords: "nusantara energi hijau epc direktur founder ebt agustus 2025" },
   { title: "PT Solar Energy Technology (Founder & Direktur)", category: "Pengalaman Kerja", link: "#experience", keywords: "solar energy technology ipp direktur maret 2026 pembangkit publik" },
   { title: "PT Tiara Mulia Lestari (Sekretaris Eksekutif)", category: "Pengalaman Kerja", link: "#experience", keywords: "tiara mulia lestari sekretaris eksekutif bioenergy air minum oktober 2025" },
   { title: "PT Arindo Karya Perkasa (Staf Manajemen)", category: "Pengalaman Kerja", link: "#experience", keywords: "arindo karya perkasa real estate properti strategi september 2025" },
   { title: "PT Radius Sembilan Utama (Magang NDT)", category: "Pengalaman Kerja", link: "#experience", keywords: "radius sembilan utama inspektor magang ndt ut mt 2022" },
+  
+  { title: "PVsyst Expert (Desain & Simulasi Yield PLTS)", category: "Kompetensi Software", link: "#competencies", keywords: "pvsyst solar pv desain yield modeling software ebt simulasi surya on-grid" },
+  { title: "RETScreen Expert (Studi Kelayakan EBT & Finansial)", category: "Kompetensi Software", link: "#competencies", keywords: "retscreen kelayakan finansial emisi studi kelayakan software clean energy ebt" },
+  { title: "AutoCAD, ANSYS, Maxsurf (Engineering Software)", category: "Kompetensi Software", link: "#competencies", keywords: "autocad ansys maxsurf rhinoceros cad tools naval architecture" },
   
   { title: "S1 Teknik Perkapalan - Universitas Hasanuddin (GPA 3.73)", category: "Pendidikan", link: "#education", keywords: "unhas teknik perkapalan naval architecture 3.73 deadrise stepped ansys cfd" },
   { title: "Sertifikasi Welding Inspector Comprehensive (BNSP)", category: "Sertifikasi", link: "#education", keywords: "bnsp welding inspector pengelasan lsp unhas mai 2023 qc" },
@@ -150,9 +155,10 @@ const searchIndex = [
   
   { title: "Disaster and Climate Tech Hub (DCT-Hub)", category: "Organisasi & Kepemimpinan", link: "#organizations", keywords: "dct hub climate tech iklim makassar action node founder bencana" },
   { title: "APPLTSI (Asosiasi Pengusaha PLTS Indonesia)", category: "Organisasi & Kepemimpinan", link: "#organizations", keywords: "appltsi asosiasi surya solar ti founder asosiasi pengusaha" },
+  { title: "Annual Next-Gen Climate Tech, Carbon Markets, & Green Investment Forum", category: "Organisasi & Kepemimpinan", link: "#organizations", keywords: "annual next-gen climate tech carbon markets green investment forum iklim 2025" },
   { title: "Makassar for Gaza", category: "Organisasi & Kepemimpinan", link: "#organizations", keywords: "makassar for gaza palestina kemanusiaan solidaritas founder" },
-  { title: "KKCTBN 2023 - Juara 3 Nasional (Desain & Regulasi Kapal)", category: "Prestasi", link: "#naval-spotlight", keywords: "kkctbn juara 3 ui zhinpuru robot kapal pariwisata kemdikbud" },
-  { title: "Penelitian Performa Hidrodinamika Perahu Pinisi (2022)", category: "Penelitian Ilmiah", link: "#naval-spotlight", keywords: "pinisi perahu hidrodinamika dosen pemula unhas pariwisata bahari" },
+  { title: "KKCTBN 2023 - Juara 3 Nasional (Tim Zhinpuru)", category: "Prestasi", link: "#naval-spotlight", keywords: "kkctbn juara 3 ui zhinpuru robot kapal pariwisata pinisi taka bonerate syamsul asri" },
+  { title: "Riset Performa Hidrodinamika Perahu Pinisi (Naval Architecture)", category: "Penelitian Ilmiah", link: "#naval-spotlight", keywords: "pinisi perahu hidrodinamika naval architecture unhas pariwisata bahari keselamatan" },
   { title: "Survei Sailing Yacht Sabang & Langkawi (IMT-GT SAPHULA)", category: "Pengalaman Lapangan", link: "#field-work", keywords: "sabang langkawi sailing yacht imt gt saphula survei kapal layar" },
   { title: "Benchmarking PLTA Bili-Bili (2025)", category: "Pengalaman Lapangan", link: "#field-work", keywords: "bili bili plta hydro bendungan turbin benchmarking dct hub" },
   { title: "PT Laksamana Cakra Energi (Pemegang Saham SPV)", category: "Investasi & Ekuitas", link: "#investments", keywords: "laksamana cakra energi spv saham ekuitas pltm keureuto investor" }
@@ -169,66 +175,14 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
 });
 
-// --- 1. Theme Controller (Dark/Light) ---
+// --- 1. Theme Controller (Pure Dark Mode) ---
 function initTheme() {
-  const themeToggleBtn = document.getElementById("themeToggleBtn");
-  const storedTheme = localStorage.getItem("fr_theme") || "light";
-  
-  applyTheme(storedTheme);
-  
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      applyTheme(newTheme);
-      localStorage.setItem("fr_theme", newTheme);
-      showToast(`Mode ${newTheme === "dark" ? "Dark" : "Light"} diaktifkan`);
-    });
-  }
+  document.documentElement.setAttribute("data-theme", "dark");
 }
 
-function applyTheme(theme) {
-  if (theme === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-    const icon = document.querySelector("#themeToggleBtn i");
-    if (icon) icon.className = "fas fa-sun";
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-    const icon = document.querySelector("#themeToggleBtn i");
-    if (icon) icon.className = "fas fa-moon";
-  }
-}
-
-// --- 2. Photo Color & Monokrom Switcher ---
+// --- 2. Photo Color & Monokrom Setup ---
 function initPhotoSwitcher() {
-  const photoImg = document.getElementById("profilePhotoImg");
-  const btnColor = document.getElementById("photoBtnColor");
-  const btnMono = document.getElementById("photoBtnMono");
-  
-  if (!photoImg || !btnColor || !btnMono) return;
-  
-  const colorSrc = "Foto/fadil 34w.jpg";
-  const monoSrc = "Foto/fadil 34h.jpg";
-  
-  btnColor.addEventListener("click", () => {
-    photoImg.style.opacity = "0.3";
-    setTimeout(() => {
-      photoImg.src = colorSrc;
-      photoImg.style.opacity = "1";
-    }, 150);
-    btnColor.classList.add("active");
-    btnMono.classList.remove("active");
-  });
-  
-  btnMono.addEventListener("click", () => {
-    photoImg.style.opacity = "0.3";
-    setTimeout(() => {
-      photoImg.src = monoSrc;
-      photoImg.style.opacity = "1";
-    }, 150);
-    btnMono.classList.add("active");
-    btnColor.classList.remove("active");
-  });
+  // Photo styling is handled with CSS grayscale filter and hover color transition
 }
 
 // --- 3. Project Filter Controller ---
